@@ -1,0 +1,117 @@
+.glow {
+  position: absolute;
+  top: -10%;
+  right: -10%;
+  width: 50%;
+  height: 50%;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.02) 0%, rgba(255, 255, 255, 0) 70%);
+  filter: blur(80px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.header {
+  margin-bottom: 5rem;
+  max-width: 600px;
+}
+
+.gradientText {
+  background: linear-gradient(135deg, var(--color-primary) 0%, #10B981 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.mosaic {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 4rem;
+  position: relative;
+  z-index: 1;
+}
+
+.mosaicItem {
+  position: relative;
+  transition: transform var(--transition-medium);
+}
+
+.itemInner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  border-radius: var(--border-radius-lg);
+  border: 1px solid var(--glass-border);
+  outline: 1px solid var(--glass-border-outer);
+}
+
+.imageFrame {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.itemInner:hover .image {
+  transform: scale(1.03);
+}
+
+.cardOverlay {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  width: calc(100% - 3rem);
+  padding: 1.5rem 2rem;
+  z-index: 2;
+  transition: all var(--transition-medium);
+  border-radius: var(--border-radius-md);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.itemInner:hover .cardOverlay {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.itemTitle {
+  font-family: var(--font-geist-sans);
+  font-size: 1.25rem;
+  font-weight: 750;
+  color: var(--foreground);
+  margin-bottom: 0.25rem;
+  letter-spacing: -0.02em;
+}
+
+.itemDesc {
+  font-family: var(--font-geist-sans);
+  font-size: 0.85rem;
+  color: var(--color-gray-600);
+  line-height: 1.45;
+  font-weight: 400;
+}
+
+@media (max-width: 768px) {
+  .mosaic {
+    flex-direction: column;
+    row-gap: 2rem;
+  }
+  
+  .mosaicItem {
+    width: 100% !important;
+    height: 320px !important;
+    margin-top: 0 !important;
+    transform: none !important;
+  }
+  
+  .cardOverlay {
+    padding: 1rem 1.5rem;
+  }
+}

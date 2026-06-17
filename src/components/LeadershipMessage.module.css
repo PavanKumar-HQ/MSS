@@ -1,0 +1,175 @@
+.glow {
+  position: absolute;
+  top: 10%;
+  left: -10%;
+  width: 50%;
+  height: 50%;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.02) 0%, rgba(255, 255, 255, 0) 70%);
+  filter: blur(80px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+}
+
+.imageFrame {
+  width: 100%;
+  height: 520px;
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--glass-border);
+  outline: 1px solid var(--glass-border-outer);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.05);
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.imageContainer:hover .image {
+  transform: scale(1.02);
+}
+
+.nameCard {
+  position: absolute;
+  bottom: -1.5rem;
+  right: -1.5rem;
+  padding: 1.25rem 2rem;
+  width: max-content;
+}
+
+.name {
+  font-family: var(--font-geist-sans);
+  font-size: 1.15rem;
+  font-weight: 750;
+  color: var(--foreground);
+}
+
+.title {
+  font-family: var(--font-geist-mono);
+  font-size: 0.725rem;
+  color: var(--color-primary);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.letterWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.gradientText {
+  background: linear-gradient(135deg, var(--color-primary) 0%, #10B981 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.heading {
+  margin-bottom: 2rem;
+}
+
+.letterContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  font-family: var(--font-geist-sans);
+  font-size: 0.975rem;
+  color: var(--color-gray-600);
+  line-height: 1.65;
+  font-weight: 400;
+  margin-bottom: 2.5rem;
+}
+
+.signatureSection {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 1rem;
+}
+
+.signatureText {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-style: italic;
+  font-size: 2.25rem;
+  color: var(--color-primary);
+  line-height: 1;
+  margin-bottom: 0.25rem;
+  letter-spacing: -0.02em;
+  opacity: 0.85;
+}
+
+.signatureLine {
+  width: 140px;
+  height: 1px;
+  background: var(--color-gray-200);
+  margin: 0.5rem 0;
+}
+
+.signatureLabel {
+  font-family: var(--font-geist-mono);
+  font-size: 0.725rem;
+  color: var(--color-gray-400);
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+@media (max-width: 1024px) {
+  .layout {
+    grid-template-columns: 1fr;
+    gap: 5rem;
+  }
+  
+  .imageFrame {
+    height: 400px;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .nameCard {
+    right: 50%;
+    transform: translateX(50%);
+    bottom: -1.5rem;
+  }
+  
+  .letterWrap {
+    text-align: center;
+    align-items: center;
+  }
+  
+  .letterContent {
+    align-items: center;
+  }
+  
+  .signatureSection {
+    align-items: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .imageFrame {
+    height: 320px;
+  }
+  
+  .nameCard {
+    width: calc(100% - 2rem);
+    padding: 1rem;
+    text-align: center;
+  }
+}
