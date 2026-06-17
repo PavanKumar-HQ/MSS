@@ -81,29 +81,26 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  align-items: stretch;
   width: 100%;
 }
 
 .item {
   display: flex;
   flex-direction: column;
-  flex: 1;
-  min-width: 0;
+  flex: 0 0 380px;
+  min-height: 480px;
   position: relative;
   align-items: center;
-  justify-content: center;
 }
 
 /* Alternate vertical alignment */
 .item.even {
   justify-content: flex-start;
-  padding-bottom: 220px; 
 }
 
 .item.odd {
-  flex-direction: column-reverse;
-  padding-top: 220px;
+  justify-content: flex-end;
 }
 
 .dotContainer {
@@ -206,8 +203,7 @@
     gap: 2rem;
   }
   .item {
-    flex: 0 0 auto;
-    width: 280px;
+    flex: 0 0 320px;
   }
   .card {
     width: 100%;
