@@ -31,7 +31,7 @@ export default function CampusImmersion() {
           <h2 className="heading-display">
             Spaces that <span className={styles.gradientText}>inspire greatness.</span>
           </h2>
-          <p className="paragraph-lead" style={{ marginTop: '1rem', maxWidth: '600px' }}>
+          <p className="paragraph-lead" style={{ marginTop: '1.5rem', margin: '1.5rem auto 0', maxWidth: '600px' }}>
             Mount Senoria’s physical environment is crafted to encourage academic focus, collaborative design, and personal peace.
           </p>
         </div>
