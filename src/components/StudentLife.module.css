@@ -11,8 +11,9 @@
 }
 
 .header {
-  margin-bottom: 5rem;
-  max-width: 600px;
+  margin: 0 auto 5rem;
+  max-width: 800px;
+  text-align: center;
 }
 
 .gradientText {

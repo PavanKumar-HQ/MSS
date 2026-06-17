@@ -54,7 +54,7 @@ export default function StudentLife() {
           <h2 className="heading-display">
             A tapestry of <span className={styles.gradientText}>rich experiences.</span>
           </h2>
-          <p className="paragraph-lead" style={{ marginTop: '1.5rem', maxWidth: '600px' }}>
+          <p className="paragraph-lead" style={{ marginTop: '1.5rem', margin: '1.5rem auto 0', maxWidth: '600px' }}>
             Mount Senoria prepares students to lead meaningful lives. Outside the classrooms, students engage in high-level arts, athletics, and community leadership.
           </p>
         </div>
