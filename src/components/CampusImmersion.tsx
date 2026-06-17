@@ -12,7 +12,7 @@ const SPACES = [
   },
   { 
     title: 'Innovation Hub', 
-    desc: 'Equipped with clean rooms, robotics prototyping areas, and computational clusters to support deep student research.',
+    desc: 'Equipped with modern science equipment, robotics prototyping areas, and computer labs to support interactive learning.',
     image: '/images/science_lab.png'
   },
   { 

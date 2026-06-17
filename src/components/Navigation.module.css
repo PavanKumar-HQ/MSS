@@ -82,7 +82,7 @@
   height: 1px;
   background-color: var(--foreground);
   transform: scaleX(0);
-  transform-origin: left;
+  transform-origin: right;
   transition: transform var(--transition-medium) ease;
 }
 
@@ -93,6 +93,7 @@
 
 .link:hover::after {
   transform: scaleX(1);
+  transform-origin: left;
 }
 
 .cta {

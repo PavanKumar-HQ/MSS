@@ -51,7 +51,7 @@ export default function LeadershipMessage() {
                 At Mount Senoria, we believe that education is not merely the transfer of information; it is the ignition of a lifelong passion for truth, rigor, and service. Our pathways are designed to challenge the intellect while nurturing the character required to navigate and lead a complex world.
               </p>
               <p>
-                We invite students to become active creators rather than passive consumers. Whether collaborating in our design thinking labs, competing on our fields, or engaging in small-group seminar discussions, Mount Senoria students learn to formulate independent critique and lead with empathy.
+                We invite students to become active creators rather than passive consumers. Whether collaborating in our design thinking labs, competing on our fields, or engaging in small-group classroom discussions, Mount Senoria students learn to formulate independent critique and lead with empathy.
               </p>
               <p>
                 We welcome you to explore our campus, speak with our advisors, and join a community that has championed excellence for over a century.

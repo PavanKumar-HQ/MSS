@@ -1,0 +1,110 @@
+.header {
+  margin-bottom: 2rem;
+}
+
+.gradientText {
+  background: linear-gradient(135deg, var(--color-primary) 0%, #10B981 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  align-items: stretch;
+}
+
+.mapContainer {
+  width: 100%;
+  min-height: 280px;
+  overflow: hidden;
+}
+
+.qrCard {
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.qrWrapper {
+  background: #FFFFFF;
+  padding: 1rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.qrCode {
+  position: relative;
+  display: flex;
+}
+
+.qrPin {
+  position: absolute;
+  bottom: -10px;
+  right: -10px;
+  width: 32px;
+  height: 32px;
+  background: var(--color-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(59, 130, 246, 0.3);
+  border: 2px solid #FFFFFF;
+}
+
+.qrTitle {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+.qrDesc {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.08);
+  margin-bottom: 2rem;
+}
+
+.addressBox {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.addressLabel {
+  font-family: var(--font-geist-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #888;
+}
+
+.addressText {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #222;
+}
+
+@media (max-width: 1024px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+  .mapContainer {
+    height: 400px;
+  }
+}

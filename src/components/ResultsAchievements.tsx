@@ -5,7 +5,7 @@ import { motion, useInView, animate } from 'framer-motion';
 import styles from './ResultsAchievements.module.css';
 
 const RESULTS = [
-  { value: 100, suffix: '%', label: 'University Acceptance' },
+  { value: 100, suffix: '%', label: 'Board Pass Rate' },
   { value: 45, suffix: '+', label: 'Ivy League & Oxbridge Offers' },
   { value: 15, suffix: 'M+', label: 'Scholarships Awarded' }
 ];
@@ -21,7 +21,7 @@ export default function ResultsAchievements() {
               A legacy of <span className={styles.gradientText}>global achievements.</span>
             </h2>
             <p className="paragraph-lead" style={{ marginTop: '1.5rem', maxWidth: '540px' }}>
-              Mount Senoria graduates consistently enter elite global programs, carrying forward a tradition of rigorous scholastic research and leadership.
+              Mount Senoria students consistently achieve outstanding academic results, carrying forward a tradition of excellence, hard work, and leadership.
             </p>
           </div>
 

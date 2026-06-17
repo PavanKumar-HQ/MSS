@@ -16,7 +16,7 @@ const MOSAIC_ITEMS = [
   { 
     id: 'leadership', 
     title: 'Leadership Council', 
-    desc: 'Student-led debates, international MUN seminars, and social assemblies.',
+    desc: 'Student-led debates, international MUN conferences, and social assemblies.',
     width: '40%', 
     height: '340px', 
     image: '/images/seminar_discussion.png', 
@@ -55,7 +55,7 @@ export default function StudentLife() {
             A tapestry of <span className={styles.gradientText}>rich experiences.</span>
           </h2>
           <p className="paragraph-lead" style={{ marginTop: '1.5rem', maxWidth: '600px' }}>
-            Mount Senoria prepares students to lead meaningful lives. Outside the seminar rooms, students engage in high-level arts, athletics, and community leadership.
+            Mount Senoria prepares students to lead meaningful lives. Outside the classrooms, students engage in high-level arts, athletics, and community leadership.
           </p>
         </div>
 

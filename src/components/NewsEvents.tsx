@@ -5,92 +5,80 @@ import styles from './NewsEvents.module.css';
 
 const EVENTS = [
   {
+    day: '26',
+    month: 'JANUARY',
+    fullDate: 'JANUARY 26, 2026',
+    title: 'Annual Day',
+    summary: 'View memories and highlights from our spectacular annual day celebrations.',
+    image: '/images/seminar_discussion.png'
+  },
+  {
+    day: '20',
+    month: 'FEBRUARY',
+    fullDate: 'FEBRUARY 20, 2026',
+    title: 'Sports Day',
+    summary: 'View memories and highlights from our energetic sports day events and tournaments.',
+    image: '/images/athletics_field.png'
+  },
+  {
     day: '15',
-    month: 'OCT',
-    title: 'Admissions Open Seminar',
-    time: '10:00 AM - 12:30 PM // Grand Library'
-  },
-  {
-    day: '22',
-    month: 'NOV',
-    title: 'Mount Senoria Innovation Forum',
-    time: '02:00 PM - 05:00 PM // Science Wing'
-  },
-  {
-    day: '08',
-    month: 'DEC',
-    title: 'Annual Orchestra Concert',
-    time: '07:00 PM - 09:30 PM // Assembly Hall'
-  }
-];
-
-const ARTICLES = [
-  {
-    date: 'OCT 05, 2026',
-    title: 'Mount Senoria Students Win National Robotics Tournament',
-    summary: 'Our junior design group secured first place in engineering and software controls at the Annual Robotics League.'
-  },
-  {
-    date: 'SEP 18, 2026',
-    title: 'Academic Board Expands Advanced Placement Pathways',
-    summary: 'Starting next semester, Mount Senoria will offer 4 new collegiate courses in economics, computational physics, and history.'
+    month: 'MARCH',
+    fullDate: 'MARCH 15, 2026',
+    title: 'Science Fair',
+    summary: 'View projects and highlights from our spectacular annual science and robotics fair.',
+    image: '/images/science_lab.png'
   }
 ];
 
 export default function NewsEvents() {
   return (
-    <section className="section" id="news-events">
+    <section className="section" id="news-events" style={{ background: 'var(--background)' }}>
       <div className="container">
-        <div className={styles.layout}>
-          {/* Upcoming Events Column */}
-          <motion.div 
-            className={styles.column}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-50px' }}
-            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-          >
-            <span className="heading-sub">Upcoming Events</span>
-            <h3 className={styles.colTitle}>Academic Calendar</h3>
-            
-            <div className={styles.list}>
-              {EVENTS.map((event, index) => (
-                <div key={index} className={`glass-card glass-card-hover ${styles.eventCard}`}>
-                  <div className={styles.dateBadge}>
-                    <span className={styles.day}>{event.day}</span>
-                    <span className={styles.month}>{event.month}</span>
-                  </div>
-                  <div className={styles.eventInfo}>
-                    <h4 className={styles.eventTitle}>{event.title}</h4>
-                    <span className={styles.eventTime}>{event.time}</span>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </motion.div>
+        <div className={styles.header}>
+          <div>
+            <span className="heading-sub">Updates</span>
+            <h2 className="heading-display">
+              Latest <span className={styles.gradientText}>Events.</span>
+            </h2>
+            <p className="paragraph-lead" style={{ marginTop: '1rem' }}>What's happening at Mount Senoria</p>
+          </div>
+          <a href="#" className={styles.viewAll}>View all →</a>
+        </div>
 
-          {/* Press & Articles Column */}
-          <motion.div 
-            className={styles.column}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-50px' }}
-            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
-          >
-            <span className="heading-sub">Latest News</span>
-            <h3 className={styles.colTitle}>Press & Press Releases</h3>
-            
-            <div className={styles.list}>
-              {ARTICLES.map((article, index) => (
-                <div key={index} className={`glass-card glass-card-hover ${styles.articleCard}`}>
-                  <span className={styles.articleDate}>{article.date}</span>
-                  <h4 className={styles.articleTitle}>{article.title}</h4>
-                  <p className={styles.articleSummary}>{article.summary}</p>
-                  <a href="#news-events" className={styles.readMore}>Read Article →</a>
+        <div className={styles.grid}>
+          {EVENTS.map((event, index) => (
+            <motion.div 
+              key={index} 
+              className={styles.card}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-50px' }}
+              transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: index * 0.15 }}
+            >
+              <div className={styles.imageWrap}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={event.image} alt={event.title} className={styles.image} />
+                <div className={styles.dateBadgeOverlay}>
+                  <span className={styles.badgeMonth}>{event.month}</span>
+                  <span className={styles.badgeDay}>{event.day}</span>
                 </div>
-              ))}
-            </div>
-          </motion.div>
+              </div>
+              <div className={styles.cardContent}>
+                <h3 className={styles.cardTitle}>{event.title}</h3>
+                <p className={styles.cardSummary}>{event.summary}</p>
+                <div className={styles.divider} />
+                <div className={styles.cardFooter}>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={styles.calendarIcon}>
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                  </svg>
+                  <span className={styles.footerDate}>{event.fullDate}</span>
+                </div>
+              </div>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>

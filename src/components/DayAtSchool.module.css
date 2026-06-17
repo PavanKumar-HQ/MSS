@@ -80,15 +80,16 @@
 .events {
   display: flex;
   flex-direction: row;
-  gap: 3rem;
+  justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
 
 .item {
   display: flex;
   flex-direction: column;
-  width: 340px;
-  flex-shrink: 0;
+  flex: 1;
+  min-width: 0;
   position: relative;
   align-items: center;
   justify-content: center;
@@ -131,6 +132,7 @@
   border-radius: 999px;
   border: 1px solid var(--color-gray-200);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  white-space: nowrap;
 }
 
 .dotOuter {
@@ -152,10 +154,11 @@
 }
 
 .card {
-  width: 100%;
+  width: 320px;
   padding: 2rem;
   position: relative;
   transition: transform var(--transition-medium), box-shadow var(--transition-medium);
+  z-index: 5;
 }
 
 .card:hover {
@@ -190,8 +193,23 @@
   font-weight: 400;
 }
 
-@media (max-width: 768px) {
-  .item {
+@media (max-width: 1200px) {
+  .card {
     width: 280px;
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .events {
+    justify-content: flex-start;
+    gap: 2rem;
+  }
+  .item {
+    flex: 0 0 auto;
+    width: 280px;
+  }
+  .card {
+    width: 100%;
   }
 }

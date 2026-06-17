@@ -15,13 +15,13 @@ const CURRICULUM = [
     id: 'middle',
     title: 'Middle School',
     subtitle: 'Grades 6 - 8',
-    content: 'Fostering analytical independence, logical critique, and structured problem-solving. Students explore specialized fields in sciences, history, advanced algebra, and fine arts to prepare for college-preparatory work.'
+    content: 'Fostering analytical independence, logical critique, and structured problem-solving. Students explore specialized fields in sciences, history, advanced math, and fine arts to prepare for senior school studies.'
   },
   {
     id: 'high',
     title: 'High Preparatory',
     subtitle: 'Grades 9 - 12',
-    content: 'A prestigious, college-level preparatory program offering AP and IB options. Students specialize in pre-university tracks, engaged in intensive research seminars, athletic competitions, and portfolio arts.'
+    content: 'A comprehensive senior secondary program offering varied streams. Students specialize in their chosen subjects, engage in interactive group projects, athletic competitions, and creative arts.'
   }
 ];
 

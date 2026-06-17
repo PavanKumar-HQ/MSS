@@ -23,28 +23,69 @@
   background-clip: text;
 }
 
+.marqueeContainer {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 1rem 0;
+}
+
+/* Optional gradient fade at edges */
+.marqueeContainer::before,
+.marqueeContainer::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 150px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.marqueeContainer::before {
+  left: 0;
+  background: linear-gradient(to right, var(--background) 0%, transparent 100%);
+}
+
+.marqueeContainer::after {
+  right: 0;
+  background: linear-gradient(to left, var(--background) 0%, transparent 100%);
+}
+
+.marqueeTrack {
+  display: flex;
+  width: max-content;
+  animation: marquee 50s linear infinite;
+}
+
+.marqueeTrack:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
 .card {
-  max-width: 860px;
-  margin: 0 auto;
-  padding: 4rem;
+  width: 420px;
+  margin: 0 1.5rem;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
   position: relative;
   z-index: 1;
+  white-space: normal;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
 }
 
-.carousel {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-}
-
-.slide {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--glass-shadow-hover);
 }
 
 .quoteIcon {
-  font-size: 6rem;
+  font-size: 5rem;
   line-height: 1;
   color: rgba(59, 130, 246, 0.15);
   font-family: var(--font-geist-sans);
@@ -54,24 +95,24 @@
 
 .quoteText {
   font-family: var(--font-geist-sans);
-  font-size: clamp(1.15rem, 2vw, 1.45rem);
+  font-size: 1.1rem;
   font-weight: 600;
   color: var(--foreground);
   line-height: 1.55;
-  letter-spacing: -0.03em;
-  margin-bottom: 2.5rem;
+  letter-spacing: -0.02em;
+  margin-bottom: 2rem;
+  flex-grow: 1;
 }
 
 .meta {
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
-  margin-bottom: 1.5rem;
 }
 
 .author {
   font-family: var(--font-geist-sans);
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   font-weight: 750;
   color: var(--foreground);
 }
@@ -85,51 +126,19 @@
   text-transform: uppercase;
 }
 
-.controls {
-  display: flex;
-  align-items: center;
-  gap: 1.25rem;
-  margin-top: 1rem;
-}
-
-.arrow {
-  width: 2.75rem;
-  height: 2.75rem;
-  border-radius: 50%;
-  background: var(--color-gray-100);
-  border: 1px solid var(--color-gray-200);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--color-gray-600);
-  cursor: pointer;
-  transition: all var(--transition-fast);
-}
-
-.arrow:hover {
-  background: var(--foreground);
-  color: var(--background);
-  border-color: var(--foreground);
-}
-
-.counter {
-  font-family: var(--font-geist-mono);
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: var(--color-gray-600);
-}
-
 @media (max-width: 640px) {
   .card {
-    padding: 2.5rem;
+    width: 320px;
+    padding: 2rem;
+    margin: 0 1rem;
   }
   
   .quoteText {
-    font-size: 1.15rem;
-    margin-bottom: 2rem;
+    font-size: 1rem;
   }
   
-  .quoteIcon {
-    font-size: 4rem;
+  .marqueeContainer::before,
+  .marqueeContainer::after {
+    width: 60px;
   }
 }
