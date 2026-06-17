@@ -86,11 +86,11 @@
   font-weight: 400;
 }
 
-/* Alternating Overlap Layout on Desktop */
+/* Clean Alternating Layout on Desktop */
 @media (min-width: 1024px) {
   .spaceItem {
-    grid-template-columns: 1.2fr 0.8fr;
-    gap: 0;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
   }
   
   .spaceItem .imageContainer,
@@ -104,12 +104,12 @@
   
   .spaceItem.even .card {
     grid-column: 2;
-    margin-left: -5rem;
-    margin-top: 2rem;
+    margin: 0;
+    max-width: 100%;
   }
   
   .spaceItem.odd {
-    grid-template-columns: 0.8fr 1.2fr;
+    grid-template-columns: 1fr 1fr;
   }
   
   .spaceItem.odd .imageContainer {
@@ -118,9 +118,8 @@
   
   .spaceItem.odd .card {
     grid-column: 1;
-    margin-right: -5rem;
-    margin-top: 2rem;
-    margin-left: auto;
+    margin: 0;
+    max-width: 100%;
   }
 }
 
