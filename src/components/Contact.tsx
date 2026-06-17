@@ -43,7 +43,7 @@ export default function Contact() {
                 </div>
                 <div className={styles.textWrap}>
                   <span className={styles.label}>ADDRESS</span>
-                  <p className={styles.value}>3rd Main Rd, Laggere, Bengaluru, Karnataka 560058</p>
+                  <p className={styles.value}>No. 82, Mount Senoria Layout<br/>Swathantra Yodhara Nagar, Laggere<br/>Bangalore - 560058</p>
                 </div>
               </div>
 
@@ -53,7 +53,7 @@ export default function Contact() {
                 </div>
                 <div className={styles.textWrap}>
                   <span className={styles.label}>PHONE</span>
-                  <p className={styles.valueStrong}>99722 35286</p>
+                  <p className={styles.valueStrong}>+91 9632034063<br/>+91 9591099860</p>
                 </div>
               </div>
 
@@ -63,7 +63,7 @@ export default function Contact() {
                 </div>
                 <div className={styles.textWrap}>
                   <span className={styles.label}>EMAIL</span>
-                  <p className={styles.valueStrong}>info@mountsenoria.edu.in</p>
+                  <p className={styles.valueStrong}>Mountsenoriaschool2021@gmail.com<br/>lakshmikalavaishnavi@gmail.com</p>
                 </div>
               </div>
 

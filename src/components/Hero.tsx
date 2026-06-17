@@ -19,7 +19,7 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
             >
-              MOUNT SENORIA SCHOOL • EST. 1898
+              MOUNT SENORIA SCHOOL • AFFILIATED TO CISCE, NEW DELHI
             </motion.span>
             
             <motion.h1 
@@ -28,8 +28,8 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.15 }}
             >
-              Academic excellence.<br />
-              <span className={styles.gradientText}>Fostered in character.</span>
+              Inspiring bright futures.<br />
+              <span className={styles.gradientText}>Striving for excellence.</span>
             </motion.h1>
             
             <motion.p 
@@ -39,7 +39,7 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.3 }}
             >
-              A leading independent academy dedicated to cultivating deep critical thinking, athletic resilience, and creative voice in global thinkers.
+              Mount Senoria School is the premier ICSE school in Laggere, committed to academic excellence, holistic development, and nurturing young minds to prepare them for a bright future.
             </motion.p>
             
             <motion.div 
@@ -63,7 +63,7 @@ export default function Hero() {
             <div className={styles.imageFrame}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img 
-                src="/images/campus_exterior.png" 
+                src="/images/scraped/01.jpg" 
                 alt="Mount Senoria Campus" 
                 className={styles.image}
               />
@@ -77,13 +77,13 @@ export default function Hero() {
               transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1], delay: 0.75 }}
             >
               <div className={styles.stat}>
-                <span className={styles.statNum}>100%</span>
-                <span className={styles.statLabel}>Elite Placement</span>
+                <span className={styles.statNum}>ICSE</span>
+                <span className={styles.statLabel}>Curriculum</span>
               </div>
               <div className={styles.divider} />
               <div className={styles.stat}>
-                <span className={styles.statNum}>6:1</span>
-                <span className={styles.statLabel}>Student Ratio</span>
+                <span className={styles.statNum}>Top</span>
+                <span className={styles.statLabel}>In Laggere</span>
               </div>
             </motion.div>
           </motion.div>

@@ -8,12 +8,12 @@ const SPACES = [
   { 
     title: 'The Great Library', 
     desc: 'A sanctuary of learning, housing comprehensive print and digital collections in an architecturally inspiring glass-vaulted space.',
-    image: '/images/library_interior.png'
+    image: '/images/scraped/10.jpg'
   },
   { 
     title: 'Innovation Hub', 
     desc: 'Equipped with modern science equipment, robotics prototyping areas, and computer labs to support interactive learning.',
-    image: '/images/science_lab.png'
+    image: '/images/scraped/03.jpg'
   },
   { 
     title: 'Athletic Grounds', 

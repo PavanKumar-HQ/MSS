@@ -4,9 +4,9 @@ import styles from './GalleryAlbums.module.css';
 
 const ALBUMS = [
   { title: "Geniusphere", count: 4, image: "/images/art_studio.png" },
-  { title: "Christmas Celebration", count: 4, image: "/images/seminar_discussion.png" },
-  { title: "Independence Day", count: 6, image: "/images/athletics_field.png" },
-  { title: "Sankranti Celebration", count: 6, image: "/images/campus_exterior.png" },
+  { title: "Christmas Celebration", count: 4, image: '/images/scraped/07.jpg' },
+  { title: "Independence Day", count: 6, image: '/images/scraped/03.jpg' },
+  { title: "Sankranti Celebration", count: 6, image: '/images/scraped/01.jpg' },
   { title: "School Trip", count: 9, image: "/images/library_interior.png" },
   { title: "Science Exhibition", count: 5, image: "/images/science_lab.png" },
   { title: "Annual Day", count: 5, image: "/images/headmaster_portrait.png" },
